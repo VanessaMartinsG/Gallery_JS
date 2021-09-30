@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercício</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/scss/style.css" />
+  <script src="js/index.js" defer></script>
+</head>
+
+<body class="flex-row">
+  <aside class="side-menu closed">
+    <button class="side-menu__button side-menu__button--hamburguer">
+      <img src="./assets/closed-menu.svg" alt="Icone Menu" class="side-menu__icon" />
+    </button>
+    <button class="side-menu__button side-menu__button--home active">
+      <img src="./assets/active-home.svg" alt="Inicio ativo" class="side-menu__icon" />
+      <span class="side-menu__label">Início</span>
+    </button>
+    <button class="side-menu__button side-menu__button--likes">
+      <img src="./assets/inactive-like.svg" alt="Favoritos inativo" class="side-menu__icon" />
+      <span class="side-menu__label">Favoritos</span>
+    </button>
+    <button class="side-menu__button side-menu__button--settings">
+      <img src="./assets/inactive-settings.svg" alt="Configurações inativa" class="side-menu__icon" />
+      <span class="side-menu__label">Configurações</span>
+    </button>
+  </aside>
+  <main class="main">
+    <h1 class="main__title">Início</h1>
+    <div class="gallery">
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 1.png" alt="Hamster" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 2.png" alt="Gato" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 3.png" alt="Lobo" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 4.png" alt="Macaco" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 5.png" alt="Borboleta" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 6.png" alt="Leopardo" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 7.png" alt="Raposa" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 8.png" alt="Raposa branca" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 9.png" alt="Tartaruga" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+      <div class="gallery__item">
+        <img class="item__like hidden" src="./assets/like.svg" alt="Like" />
+        <img class="item__image" src="./assets/gallery/image 10.png" alt="Leão" />
+        <div class="gallery__item__text">
+          <span class="item__title">Lorem ipsum</span>
+          <span class="item__date">há 1 mês</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal hidden">
+    <button class="modal__button close">
+      <img src="./assets/close-modal.svg" alt="Fechar modal" />
+    </button>
+    <div class="modal__container">
+      <img class="modal__button previous" src="./assets/prev.svg" alt="Anterior" />
+      <img class="modal__image" />
+      <img class="modal__like hidden" src="./assets/like.svg" alt="Like" />
+      <img class="modal__button next" src="./assets/next.svg" alt="Próximo" />
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+@import "./global.scss";
+
+.side-menu {
+  padding: 20px;
+  background-color: #313131;
+  gap: 40px;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  &.closed {
+    .side-menu__label {
+      display: none;
+    }
+  }
+
+  .side-menu__button {
+    all: unset;
+    cursor: pointer;
+
+    gap: 25px;
+    color: #888888;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:nth-of-type(3) {
+      margin-bottom: auto;
+    }
+
+    &.active {
+      color: #fff;
+    }
+  }
+}
+
+.main {
+  flex-grow: 1;
+
+  padding: 90px 42px;
+  padding-bottom: 42px;
+
+  .main__title {
+    font-size: 36px;
+    text-align: center;
+
+    margin-bottom: 52px;
+  }
+
+  .gallery {
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .gallery__item {
+      position: relative;
+
+      .item__like {
+        position: absolute;
+        top: 18px;
+        right: 18px;
+      }
+
+      .item__image {
+        cursor: pointer;
+        margin-bottom: 18px;
+        border-radius: 6px;
+        overflow: hidden;
+        max-width: 300px;
+        max-height: 200px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .gallery__item__text {
+      display: flex;
+      justify-content: space-between;
+
+      .item__title,
+      .item__date {
+        font-size: 20px;
+      }
+
+      .item__date {
+        color: #5c5c5c;
+      }
+    }
+  }
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .modal__button {
+    all: unset;
+    cursor: pointer;
+
+    &.close {
+      position: absolute;
+
+      top: 90px;
+      right: 45px;
+    }
+
+    &.previous {
+      position: absolute;
+      left: -100px;
+    }
+
+    &.next {
+      position: absolute;
+      right: -100px;
+    }
+  }
+
+  .modal__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .modal__image {
+      width: 500px;
+      height: auto;
+    }
+
+    .modal__like {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.vagabundos {
+  background-color: red !important;
+}
+@media screen and (max-width: 490px) {
+  .main {
+    padding: 20px 0px 42px 42px;
+  }
+}

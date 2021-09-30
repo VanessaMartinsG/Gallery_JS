@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+}
+
+.side-menu {
+  padding: 20px;
+  background-color: #313131;
+  gap: 40px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side-menu.closed .side-menu__label {
+  display: none;
+}
+
+.side-menu .side-menu__button {
+  all: unset;
+  cursor: pointer;
+  gap: 25px;
+  color: #888888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side-menu .side-menu__button:nth-of-type(3) {
+  margin-bottom: auto;
+}
+
+.side-menu .side-menu__button.active {
+  color: #fff;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 90px 42px;
+  padding-bottom: 42px;
+}
+
+.main .main__title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.main .gallery {
+  gap: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .gallery .gallery__item {
+  position: relative;
+}
+
+.main .gallery .gallery__item .item__like {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.main .gallery .gallery__item .item__image {
+  cursor: pointer;
+  margin-bottom: 18px;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 300px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+.main .gallery .gallery__item__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .gallery .gallery__item__text .item__title,
+.main .gallery .gallery__item__text .item__date {
+  font-size: 20px;
+}
+
+.main .gallery .gallery__item__text .item__date {
+  color: #5c5c5c;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal__button {
+  all: unset;
+  cursor: pointer;
+}
+
+.modal .modal__button.close {
+  position: absolute;
+  top: 90px;
+  right: 45px;
+}
+
+.modal .modal__button.previous {
+  position: absolute;
+  left: -100px;
+}
+
+.modal .modal__button.next {
+  position: absolute;
+  right: -100px;
+}
+
+.modal .modal__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal__container .modal__image {
+  width: 500px;
+  height: auto;
+}
+
+.modal .modal__container .modal__like {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.vagabundos {
+  background-color: red !important;
+}
+
+@media screen and (max-width: 490px) {
+  .main {
+    padding: 20px 0px 42px 42px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
