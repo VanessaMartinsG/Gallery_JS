@@ -4,6 +4,7 @@ let modal = document.querySelector(".modal");
 let modalImg = document.querySelector(".modal__image");
 let modalLike = modal.querySelector(".modal__like");
 let images = document.querySelectorAll(".item__image");
+let selectImg = null;
 
 
 // -------- MENU LATERAL ---------
@@ -46,15 +47,12 @@ function changeLike(img) {
 
 //** Colocar like pelo modal
 modalImg.addEventListener("dblclick", () => {
-    images.forEach(img => {
-        if (img.src == modalImg.src) {
-            changeLike(img);
-            if (modalLike.classList.contains("hidden"))
-                modalLike.classList.remove("hidden");
-            else
-                modalLike.classList.add("hidden");
-        }
-    });
+
+    changeLike(selectImg);
+    if (modalLike.classList.contains("hidden"))
+        modalLike.classList.remove("hidden");
+    else
+        modalLike.classList.add("hidden");
 });
 
 
@@ -65,6 +63,7 @@ function openModal(img) {
     if (modal.classList.contains("hidden")) {
         modal.classList.remove("hidden");
         modalImg.src = img.src;
+        selectImg = img;
         if (hasLike(img))
             modalLike.classList.remove("hidden");
     }
@@ -76,6 +75,7 @@ modal.addEventListener("click", (e) => {
         modal.classList.add("hidden");
         modalImg.src = "";
         modalLike.classList.add("hidden");
+        selectImg = null;
     }
 });
 
