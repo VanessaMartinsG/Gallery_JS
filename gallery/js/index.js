@@ -12,3 +12,15 @@ btnOpenMenu.addEventListener("click", () => {
         btnCloseMenu.src = "./assets/closed-menu.svg"
     }
 });
+
+document.querySelectorAll(".item__image").forEach(img => {
+    img.addEventListener("dblclick", () => {
+        let like = img.parentNode.querySelector(".item__like");
+        if (like != null) {
+            if (like.classList.contains("hidden"))
+                like.classList.remove("hidden");
+            else
+                like.classList.add("hidden");
+        }
+    });
+});
