@@ -1,10 +1,12 @@
 //--------- VARIAVEIS GLOBAIS ---------
 let btnOpenMenu = document.querySelector(".side-menu__button--hamburguer");
 let modal = document.querySelector(".modal");
-let modalImg = document.querySelector(".modal__image");
+let modalImg = modal.querySelector(".modal__image");
 let modalLike = modal.querySelector(".modal__like");
 let images = document.querySelectorAll(".item__image");
 let selectImg = null;
+let backBtn = modal.querySelector(".previous")
+let nextBtn = modal.querySelector(".next")
 
 
 // -------- MENU LATERAL ---------
@@ -62,11 +64,19 @@ modalImg.addEventListener("dblclick", () => {
 function openModal(img) {
     if (modal.classList.contains("hidden")) {
         modal.classList.remove("hidden");
-        modalImg.src = img.src;
-        selectImg = img;
-        if (hasLike(img))
-            modalLike.classList.remove("hidden");
+        updateModal(img);
     }
+}
+
+//** Ele coloca a foto no modal, verifica se esta com like e chama a função de trocar imagem
+function updateModal(img) {
+    modalImg.src = img.src;
+    selectImg = img;
+    if (hasLike(img))
+        modalLike.classList.remove("hidden");
+    else
+        modalLike.classList.add("hidden");
+    changeArrows(img);
 }
 
 //** Fecha o modal
@@ -99,4 +109,34 @@ images.forEach(img => {
     });
 });
 
+
+// ----------- NEXT & BACK BOTÃO MODAL ----------
+
+//** Essa função esconde a primeira e ultima flecha
+function changeArrows(img) {
+    let card = img.parentNode;
+    if (card.previousElementSibling == null)
+        backBtn.style.display = "none";
+    else
+        backBtn.style.display = "block";
+
+    if (card.nextElementSibling == null)
+        nextBtn.style.display = "none";
+    else
+        nextBtn.style.display = "block";
+}
+
+//** Realiza a ação de voltar as imagens
+backBtn.addEventListener("click", () => {
+    let backCard = selectImg.parentNode.previousElementSibling;
+    let backImg = backCard.querySelector(".item__image");
+    updateModal(backImg);
+})
+
+//** Realiza a ação de avançar as imagens
+nextBtn.addEventListener("click", () => {
+    let nextCard = selectImg.parentNode.nextElementSibling;
+    let nextImg = nextCard.querySelector(".item__image");
+    updateModal(nextImg);
+})
 
